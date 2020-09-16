@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+
+    <style>
+       
+       body {
+           background-image: linear-gradient(to bottom, #114163, black);
+           position: absolute;
+           width: 100vw;
+           height: 100vh;
+           z-index: 1;
+        }
+        
+        img {
+            width: 60%;
+            margin-left: 20%;
+            margin-top: 3%;
+            z-index: 2;
+        }
+
+        h2 {
+            position: absolute;
+            left: 5.58%;
+            bottom: 63%;
+            color: white;
+            font-family: 'Anton', sans-serif;
+            font-size: 60px;
+            transform: rotate(-90deg);
+
+}
+
+        
+
+    </style>
+    <title>Electro-CraftingDay5</title>
+</head>
+<body>
+    
+    <body onClick="changeImage()"></body>
+    
+   
+    <h2>Keep Clicking</h2>
+    <img src="img-sq/IMG_0359.JPG" alt="Langdon1">
+<script>
+    const pathNames = [
+        'img-sq/IMG_0359.JPG',
+        'img-sq/2D1A0076.jpg',
+        'img-sq/2D1A0041.jpg',
+        'img-sq/2D1A0082.jpg',
+        'img-sq/2D1A0104.jpg',
+        'img-sq/2D1A0085.jpg',
+        'img-sq/2D1A0028 2.jpg',
+        'img-sq/2D1A0094.jpg',
+        'img-sq/2D1A0079.jpg',
+        'img-sq/2D1A0087.jpg',
+
+    ]
+
+
+    const myImageElement = document.body.querySelector('img');
+    myImageElement.src = `${pathNames[Math.floor(Math.random()*pathNames.length)]}`;
+    function changeImage (){
+        myImageElement.src = `${pathNames[Math.floor(Math.random()*pathNames.length)]}`;
+        myImageElement.height += 200;
+        myImageElement.width += 200;  
+
+    }
+   //document.body.style.background = '#114163';
+
+</script>
+</body>
+</html>
